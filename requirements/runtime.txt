@@ -1,0 +1,12 @@
+mmcv
+Cython
+matplotlib
+numpy
+wilds
+dgllife
+PyTDC
+torch_geometric
+torch_sparse
+transformers
+rdkit-pypi
+dgl-cu110

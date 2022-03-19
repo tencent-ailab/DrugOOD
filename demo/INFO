@@ -1,0 +1,219 @@
+2022-02-08 14:20:07,615 - ood - INFO - start runner...
+2022-02-08 14:20:07,615 - ood - INFO - Start running, host: root@VM-120-89-centos, work_dir: /apdcephfs/share_1364275/yuanfengji/project/graph-ood-benchmark/work_dirs/debug
+2022-02-08 14:20:07,616 - ood - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) FixedLrUpdaterHook                 
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) FixedLrUpdaterHook                 
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) FixedLrUpdaterHook                 
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(ABOVE_NORMAL) OptimizerHook                      
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+before_val_epoch:
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+after_run:
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+2022-02-08 14:20:07,617 - ood - INFO - workflow: [('train', 1)], max: 2 epochs
+2022-02-08 14:20:15,868 - ood - INFO - Epoch [train][1][5/51]	lr: 1.000e-04, eta: 0:02:36, time: 1.611, data_time: 1.316, memory: 98, crossentropy_loss: 2.7809, loss: 2.7809
+2022-02-08 14:20:16,193 - ood - INFO - Epoch [train][1][10/51]	lr: 1.000e-04, eta: 0:01:17, time: 0.065, data_time: 0.048, memory: 99, crossentropy_loss: 1.8011, loss: 1.8011
+2022-02-08 14:20:16,320 - ood - INFO - Epoch [train][1][15/51]	lr: 1.000e-04, eta: 0:00:49, time: 0.025, data_time: 0.009, memory: 99, crossentropy_loss: 1.5096, loss: 1.5096
+2022-02-08 14:20:16,494 - ood - INFO - Epoch [train][1][20/51]	lr: 1.000e-04, eta: 0:00:35, time: 0.035, data_time: 0.018, memory: 101, crossentropy_loss: 1.3625, loss: 1.3625
+2022-02-08 14:20:16,629 - ood - INFO - Epoch [train][1][25/51]	lr: 1.000e-04, eta: 0:00:27, time: 0.027, data_time: 0.010, memory: 101, crossentropy_loss: 1.0939, loss: 1.0939
+2022-02-08 14:20:16,803 - ood - INFO - Epoch [train][1][30/51]	lr: 1.000e-04, eta: 0:00:21, time: 0.035, data_time: 0.018, memory: 101, crossentropy_loss: 0.9942, loss: 0.9942
+2022-02-08 14:20:17,347 - ood - INFO - Epoch [train][1][35/51]	lr: 1.000e-04, eta: 0:00:18, time: 0.108, data_time: 0.091, memory: 101, crossentropy_loss: 0.8777, loss: 0.8777
+2022-02-08 14:20:18,292 - ood - INFO - Epoch [train][1][40/51]	lr: 1.000e-04, eta: 0:00:16, time: 0.189, data_time: 0.171, memory: 101, crossentropy_loss: 0.7909, loss: 0.7909
+2022-02-08 14:20:19,441 - ood - INFO - Epoch [train][1][45/51]	lr: 1.000e-04, eta: 0:00:14, time: 0.229, data_time: 0.211, memory: 101, crossentropy_loss: 0.7262, loss: 0.7262
+2022-02-08 14:20:21,560 - ood - INFO - Epoch [train][1][50/51]	lr: 1.000e-04, eta: 0:00:14, time: 0.424, data_time: 0.407, memory: 102, crossentropy_loss: 0.6703, loss: 0.6703
+2022-02-08 14:20:43,154 - ood - INFO - Epoch(val) [1][19]	OOD_val-accuracy: 78.4167, OOD_val-auc: 68.6694, IID_val-accuracy: 86.3852, IID_val-auc: 68.9549, OOD_test-accuracy: 68.4109, OOD_test-auc: 60.8278, IID_test-accuracy: 84.9508, IID_test-auc: 68.2071
+2022-02-08 14:20:49,516 - ood - INFO - Epoch [train][2][5/51]	lr: 1.000e-04, eta: 0:00:16, time: 1.261, data_time: 1.182, memory: 102, crossentropy_loss: 0.6780, loss: 0.6780
+2022-02-08 14:20:50,217 - ood - INFO - Epoch [train][2][10/51]	lr: 1.000e-04, eta: 0:00:13, time: 0.140, data_time: 0.052, memory: 102, crossentropy_loss: 0.6041, loss: 0.6041
+2022-02-08 14:20:51,135 - ood - INFO - Epoch [train][2][15/51]	lr: 1.000e-04, eta: 0:00:11, time: 0.184, data_time: 0.167, memory: 102, crossentropy_loss: 0.5622, loss: 0.5622
+2022-02-08 14:20:51,331 - ood - INFO - Epoch [train][2][20/51]	lr: 1.000e-04, eta: 0:00:09, time: 0.039, data_time: 0.023, memory: 102, crossentropy_loss: 0.5305, loss: 0.5305
+2022-02-08 14:20:51,525 - ood - INFO - Epoch [train][2][25/51]	lr: 1.000e-04, eta: 0:00:07, time: 0.039, data_time: 0.021, memory: 102, crossentropy_loss: 0.4986, loss: 0.4986
+2022-02-08 14:20:51,706 - ood - INFO - Epoch [train][2][30/51]	lr: 1.000e-04, eta: 0:00:05, time: 0.036, data_time: 0.019, memory: 102, crossentropy_loss: 0.4930, loss: 0.4930
+2022-02-08 14:20:51,908 - ood - INFO - Epoch [train][2][35/51]	lr: 1.000e-04, eta: 0:00:04, time: 0.040, data_time: 0.024, memory: 102, crossentropy_loss: 0.4605, loss: 0.4605
+2022-02-08 14:20:52,051 - ood - INFO - Epoch [train][2][40/51]	lr: 1.000e-04, eta: 0:00:02, time: 0.029, data_time: 0.012, memory: 102, crossentropy_loss: 0.4142, loss: 0.4142
+2022-02-08 14:20:52,200 - ood - INFO - Epoch [train][2][45/51]	lr: 1.000e-04, eta: 0:00:01, time: 0.030, data_time: 0.013, memory: 102, crossentropy_loss: 0.3834, loss: 0.3834
+2022-02-08 14:20:52,332 - ood - INFO - Epoch [train][2][50/51]	lr: 1.000e-04, eta: 0:00:00, time: 0.026, data_time: 0.010, memory: 102, crossentropy_loss: 0.4446, loss: 0.4446
+2022-02-08 14:20:52,712 - ood - INFO - Saving checkpoint at 2 epochs
+2022-02-08 14:21:13,823 - ood - INFO - Epoch(val) [2][19]	OOD_val-accuracy: 28.6389, OOD_val-auc: 50.4422, IID_val-accuracy: 25.1423, IID_val-auc: 61.0310, OOD_test-accuracy: 37.4828, OOD_test-auc: 50.5108, IID_test-accuracy: 24.4549, IID_test-auc: 59.7615
+2022-02-08 14:21:59,374 - ood - INFO - start runner...
+2022-02-08 14:21:59,375 - ood - INFO - Start running, host: root@VM-120-89-centos, work_dir: /apdcephfs/share_1364275/yuanfengji/project/graph-ood-benchmark/work_dirs/debug
+2022-02-08 14:21:59,376 - ood - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) FixedLrUpdaterHook                 
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) FixedLrUpdaterHook                 
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) FixedLrUpdaterHook                 
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(ABOVE_NORMAL) OptimizerHook                      
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) CheckpointHook                     
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(NORMAL      ) EvalHook                           
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+before_val_epoch:
+(LOW         ) IterTimerHook                      
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+before_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(LOW         ) IterTimerHook                      
+ -------------------- 
+after_val_epoch:
+(VERY_LOW    ) LiteTextLoggerHook                 
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+after_run:
+(VERY_LOW    ) LiteTensorboardLoggerHook          
+ -------------------- 
+2022-02-08 14:21:59,377 - ood - INFO - workflow: [('train', 1)], max: 5 epochs
+2022-02-08 14:22:06,142 - ood - INFO - Epoch [train][1][5/51]	lr: 1.000e-04, eta: 0:05:36, time: 1.345, data_time: 1.255, memory: 102, crossentropy_loss: 2.7809, loss: 2.7809
+2022-02-08 14:22:06,529 - ood - INFO - Epoch [train][1][10/51]	lr: 1.000e-04, eta: 0:02:54, time: 0.078, data_time: 0.036, memory: 102, crossentropy_loss: 1.8011, loss: 1.8011
+2022-02-08 14:22:06,689 - ood - INFO - Epoch [train][1][15/51]	lr: 1.000e-04, eta: 0:01:56, time: 0.032, data_time: 0.015, memory: 102, crossentropy_loss: 1.5096, loss: 1.5096
+2022-02-08 14:22:06,942 - ood - INFO - Epoch [train][1][20/51]	lr: 1.000e-04, eta: 0:01:28, time: 0.051, data_time: 0.034, memory: 102, crossentropy_loss: 1.3625, loss: 1.3625
+2022-02-08 14:22:07,427 - ood - INFO - Epoch [train][1][25/51]	lr: 1.000e-04, eta: 0:01:13, time: 0.097, data_time: 0.080, memory: 102, crossentropy_loss: 1.0939, loss: 1.0939
+2022-02-08 14:22:08,295 - ood - INFO - Epoch [train][1][30/51]	lr: 1.000e-04, eta: 0:01:06, time: 0.174, data_time: 0.156, memory: 102, crossentropy_loss: 0.9942, loss: 0.9942
+2022-02-08 14:22:09,284 - ood - INFO - Epoch [train][1][35/51]	lr: 1.000e-04, eta: 0:01:02, time: 0.198, data_time: 0.180, memory: 102, crossentropy_loss: 0.8777, loss: 0.8777
+2022-02-08 14:22:11,687 - ood - INFO - Epoch [train][1][40/51]	lr: 1.000e-04, eta: 0:01:05, time: 0.481, data_time: 0.463, memory: 102, crossentropy_loss: 0.7909, loss: 0.7909
+2022-02-08 14:22:12,684 - ood - INFO - Epoch [train][1][45/51]	lr: 1.000e-04, eta: 0:01:01, time: 0.199, data_time: 0.182, memory: 102, crossentropy_loss: 0.7262, loss: 0.7262
+2022-02-08 14:22:13,851 - ood - INFO - Epoch [train][1][50/51]	lr: 1.000e-04, eta: 0:00:59, time: 0.233, data_time: 0.215, memory: 103, crossentropy_loss: 0.6703, loss: 0.6703
+2022-02-08 14:22:35,655 - ood - INFO - Epoch(val) [1][19]	OOD_val-accuracy: 78.4167, OOD_val-auc: 68.6694, IID_val-accuracy: 86.3852, IID_val-auc: 68.9549, OOD_test-accuracy: 68.4109, OOD_test-auc: 60.8278, IID_test-accuracy: 84.9508, IID_test-auc: 68.2071
+2022-02-08 14:22:42,217 - ood - INFO - Epoch [train][2][5/51]	lr: 1.000e-04, eta: 0:01:13, time: 1.270, data_time: 1.201, memory: 103, crossentropy_loss: 0.6780, loss: 0.6780
+2022-02-08 14:22:42,708 - ood - INFO - Epoch [train][2][10/51]	lr: 1.000e-04, eta: 0:01:07, time: 0.098, data_time: 0.036, memory: 103, crossentropy_loss: 0.6041, loss: 0.6041
+2022-02-08 14:22:43,074 - ood - INFO - Epoch [train][2][15/51]	lr: 1.000e-04, eta: 0:01:01, time: 0.073, data_time: 0.017, memory: 103, crossentropy_loss: 0.5622, loss: 0.5622
+2022-02-08 14:22:43,217 - ood - INFO - Epoch [train][2][20/51]	lr: 1.000e-04, eta: 0:00:56, time: 0.029, data_time: 0.012, memory: 103, crossentropy_loss: 0.5305, loss: 0.5305
+2022-02-08 14:22:43,358 - ood - INFO - Epoch [train][2][25/51]	lr: 1.000e-04, eta: 0:00:51, time: 0.028, data_time: 0.011, memory: 103, crossentropy_loss: 0.4986, loss: 0.4986
+2022-02-08 14:22:43,652 - ood - INFO - Epoch [train][2][30/51]	lr: 1.000e-04, eta: 0:00:47, time: 0.059, data_time: 0.041, memory: 103, crossentropy_loss: 0.4930, loss: 0.4930
+2022-02-08 14:22:43,789 - ood - INFO - Epoch [train][2][35/51]	lr: 1.000e-04, eta: 0:00:43, time: 0.027, data_time: 0.011, memory: 103, crossentropy_loss: 0.4605, loss: 0.4605
+2022-02-08 14:22:43,953 - ood - INFO - Epoch [train][2][40/51]	lr: 1.000e-04, eta: 0:00:40, time: 0.033, data_time: 0.015, memory: 103, crossentropy_loss: 0.4142, loss: 0.4142
+2022-02-08 14:22:44,102 - ood - INFO - Epoch [train][2][45/51]	lr: 1.000e-04, eta: 0:00:37, time: 0.030, data_time: 0.012, memory: 103, crossentropy_loss: 0.3834, loss: 0.3834
+2022-02-08 14:22:44,250 - ood - INFO - Epoch [train][2][50/51]	lr: 1.000e-04, eta: 0:00:34, time: 0.029, data_time: 0.012, memory: 103, crossentropy_loss: 0.4446, loss: 0.4446
+2022-02-08 14:23:06,305 - ood - INFO - Epoch(val) [2][19]	OOD_val-accuracy: 28.6389, OOD_val-auc: 50.4422, IID_val-accuracy: 25.1423, IID_val-auc: 61.0310, OOD_test-accuracy: 37.4828, OOD_test-auc: 50.5108, IID_test-accuracy: 24.4549, IID_test-auc: 59.7615
+2022-02-08 14:23:12,892 - ood - INFO - Epoch [train][3][5/51]	lr: 1.000e-04, eta: 0:00:40, time: 1.309, data_time: 1.233, memory: 103, crossentropy_loss: 0.3962, loss: 0.3962
+2022-02-08 14:23:13,332 - ood - INFO - Epoch [train][3][10/51]	lr: 1.000e-04, eta: 0:00:38, time: 0.088, data_time: 0.029, memory: 103, crossentropy_loss: 0.3366, loss: 0.3366
+2022-02-08 14:23:13,567 - ood - INFO - Epoch [train][3][15/51]	lr: 1.000e-04, eta: 0:00:35, time: 0.046, data_time: 0.025, memory: 103, crossentropy_loss: 0.3454, loss: 0.3454
+2022-02-08 14:23:13,715 - ood - INFO - Epoch [train][3][20/51]	lr: 1.000e-04, eta: 0:00:32, time: 0.030, data_time: 0.014, memory: 103, crossentropy_loss: 0.2899, loss: 0.2899
+2022-02-08 14:23:13,864 - ood - INFO - Epoch [train][3][25/51]	lr: 1.000e-04, eta: 0:00:30, time: 0.030, data_time: 0.012, memory: 103, crossentropy_loss: 0.3331, loss: 0.3331
+2022-02-08 14:23:14,040 - ood - INFO - Epoch [train][3][30/51]	lr: 1.000e-04, eta: 0:00:28, time: 0.035, data_time: 0.017, memory: 103, crossentropy_loss: 0.3199, loss: 0.3199
+2022-02-08 14:23:14,178 - ood - INFO - Epoch [train][3][35/51]	lr: 1.000e-04, eta: 0:00:26, time: 0.028, data_time: 0.011, memory: 103, crossentropy_loss: 0.2807, loss: 0.2807
+2022-02-08 14:23:14,337 - ood - INFO - Epoch [train][3][40/51]	lr: 1.000e-04, eta: 0:00:24, time: 0.032, data_time: 0.015, memory: 103, crossentropy_loss: 0.3261, loss: 0.3261
+2022-02-08 14:23:14,547 - ood - INFO - Epoch [train][3][45/51]	lr: 1.000e-04, eta: 0:00:22, time: 0.042, data_time: 0.024, memory: 103, crossentropy_loss: 0.3045, loss: 0.3045
+2022-02-08 14:23:14,720 - ood - INFO - Epoch [train][3][50/51]	lr: 1.000e-04, eta: 0:00:21, time: 0.035, data_time: 0.018, memory: 103, crossentropy_loss: 0.2964, loss: 0.2964
+2022-02-08 14:23:36,723 - ood - INFO - Epoch(val) [3][19]	OOD_val-accuracy: 88.8056, OOD_val-auc: 70.6081, IID_val-accuracy: 96.0152, IID_val-auc: 81.7783, OOD_test-accuracy: 73.3958, OOD_test-auc: 56.9523, IID_test-accuracy: 95.8102, IID_test-auc: 79.5217
+2022-02-08 14:23:43,273 - ood - INFO - Epoch [train][4][5/51]	lr: 1.000e-04, eta: 0:00:23, time: 1.302, data_time: 1.217, memory: 103, crossentropy_loss: 0.2688, loss: 0.2688
+2022-02-08 14:23:43,676 - ood - INFO - Epoch [train][4][10/51]	lr: 1.000e-04, eta: 0:00:21, time: 0.080, data_time: 0.027, memory: 103, crossentropy_loss: 0.2572, loss: 0.2572
+2022-02-08 14:23:43,980 - ood - INFO - Epoch [train][4][15/51]	lr: 1.000e-04, eta: 0:00:19, time: 0.061, data_time: 0.024, memory: 103, crossentropy_loss: 0.2735, loss: 0.2735
+2022-02-08 14:23:44,154 - ood - INFO - Epoch [train][4][20/51]	lr: 1.000e-04, eta: 0:00:18, time: 0.035, data_time: 0.017, memory: 103, crossentropy_loss: 0.2441, loss: 0.2441
+2022-02-08 14:23:44,318 - ood - INFO - Epoch [train][4][25/51]	lr: 1.000e-04, eta: 0:00:16, time: 0.033, data_time: 0.016, memory: 103, crossentropy_loss: 0.2443, loss: 0.2443
+2022-02-08 14:23:44,553 - ood - INFO - Epoch [train][4][30/51]	lr: 1.000e-04, eta: 0:00:15, time: 0.047, data_time: 0.030, memory: 103, crossentropy_loss: 0.2687, loss: 0.2687
+2022-02-08 14:23:44,692 - ood - INFO - Epoch [train][4][35/51]	lr: 1.000e-04, eta: 0:00:13, time: 0.028, data_time: 0.012, memory: 103, crossentropy_loss: 0.2338, loss: 0.2338
+2022-02-08 14:23:44,849 - ood - INFO - Epoch [train][4][40/51]	lr: 1.000e-04, eta: 0:00:12, time: 0.031, data_time: 0.014, memory: 103, crossentropy_loss: 0.2185, loss: 0.2185
+2022-02-08 14:23:46,017 - ood - INFO - Epoch [train][4][45/51]	lr: 1.000e-04, eta: 0:00:11, time: 0.234, data_time: 0.217, memory: 103, crossentropy_loss: 0.2240, loss: 0.2240
+2022-02-08 14:23:46,329 - ood - INFO - Epoch [train][4][50/51]	lr: 1.000e-04, eta: 0:00:10, time: 0.062, data_time: 0.044, memory: 103, crossentropy_loss: 0.2594, loss: 0.2594
+2022-02-08 14:24:07,848 - ood - INFO - Epoch(val) [4][19]	OOD_val-accuracy: 88.8333, OOD_val-auc: 69.5061, IID_val-accuracy: 95.9203, IID_val-auc: 78.6264, OOD_test-accuracy: 73.3958, OOD_test-auc: 52.9578, IID_test-accuracy: 95.7674, IID_test-auc: 73.9325
+2022-02-08 14:24:14,286 - ood - INFO - Epoch [train][5][5/51]	lr: 1.000e-04, eta: 0:00:10, time: 1.279, data_time: 1.206, memory: 103, crossentropy_loss: 0.1885, loss: 0.1885
+2022-02-08 14:24:14,795 - ood - INFO - Epoch [train][5][10/51]	lr: 1.000e-04, eta: 0:00:09, time: 0.102, data_time: 0.035, memory: 103, crossentropy_loss: 0.2080, loss: 0.2080
+2022-02-08 14:24:15,105 - ood - INFO - Epoch [train][5][15/51]	lr: 1.000e-04, eta: 0:00:07, time: 0.062, data_time: 0.031, memory: 103, crossentropy_loss: 0.2235, loss: 0.2235
+2022-02-08 14:24:16,296 - ood - INFO - Epoch [train][5][20/51]	lr: 1.000e-04, eta: 0:00:06, time: 0.238, data_time: 0.221, memory: 103, crossentropy_loss: 0.2273, loss: 0.2273
+2022-02-08 14:24:16,431 - ood - INFO - Epoch [train][5][25/51]	lr: 1.000e-04, eta: 0:00:05, time: 0.027, data_time: 0.010, memory: 103, crossentropy_loss: 0.2238, loss: 0.2238
+2022-02-08 14:24:16,634 - ood - INFO - Epoch [train][5][30/51]	lr: 1.000e-04, eta: 0:00:04, time: 0.040, data_time: 0.024, memory: 103, crossentropy_loss: 0.2147, loss: 0.2147
+2022-02-08 14:24:16,826 - ood - INFO - Epoch [train][5][35/51]	lr: 1.000e-04, eta: 0:00:03, time: 0.038, data_time: 0.021, memory: 103, crossentropy_loss: 0.1949, loss: 0.1949
+2022-02-08 14:24:16,975 - ood - INFO - Epoch [train][5][40/51]	lr: 1.000e-04, eta: 0:00:02, time: 0.030, data_time: 0.013, memory: 103, crossentropy_loss: 0.2134, loss: 0.2134
+2022-02-08 14:24:17,139 - ood - INFO - Epoch [train][5][45/51]	lr: 1.000e-04, eta: 0:00:01, time: 0.033, data_time: 0.016, memory: 103, crossentropy_loss: 0.1794, loss: 0.1794
+2022-02-08 14:24:17,296 - ood - INFO - Epoch [train][5][50/51]	lr: 1.000e-04, eta: 0:00:00, time: 0.031, data_time: 0.014, memory: 103, crossentropy_loss: 0.1685, loss: 0.1685
+2022-02-08 14:24:17,709 - ood - INFO - Saving checkpoint at 5 epochs
+2022-02-08 14:24:39,152 - ood - INFO - Epoch(val) [5][19]	OOD_val-accuracy: 88.9444, OOD_val-auc: 72.1558, IID_val-accuracy: 96.2049, IID_val-auc: 83.3098, OOD_test-accuracy: 73.4784, OOD_test-auc: 58.5738, IID_test-accuracy: 95.7674, IID_test-auc: 80.9273
