@@ -74,10 +74,13 @@ class AssayFilter(Filter):
         assay_id = data[0]['ASSAY_ID']
         confidence_score = self.sql_func.get_confidence_score_for_assay(assay_id)
         confidence_score = int(confidence_score)
-        if confidence_score >= self.cfg["confidence_score"]:
+        if self.cfg["confidence_score"] is None:
+            return True
+        elif confidence_score >= self.cfg["confidence_score"]:
             return True
         else:
             return False
+        
 
 
 class SampleFilter(Filter):
