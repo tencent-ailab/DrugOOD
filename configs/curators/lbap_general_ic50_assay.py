@@ -4,4 +4,4 @@ _base_ = ['../_base_/curators/lbap_defaults.py',
 
 path = dict(task=dict(subset="lbap_general_ec50_assay"))
 
-noise_filter = dict(assay=dict(measurement_type=['EC50']))
+noise_filter = dict(assay=dict(measurement_type=['IC50']))
