@@ -11,6 +11,7 @@ from drugood.curators.chembl.filter import AssayFilter, SampleFilter
 from drugood.curators.chembl.sql_exe import SqlFunctions
 from drugood.curators.get_domain_info import DomainInfo, SortFunc
 
+
 class GenericCurator(object):
     """Base curator.
     Args:
@@ -274,6 +275,13 @@ class GenericCurator(object):
         self.statistics['ood_test datapoints'] = len(ood_test)
         self.statistics['iid_val datapoints'] = len(iid_val)
         self.statistics['iid_test datapoints'] = len(iid_test)
+
+        self.statistics['train domain number'] = len(set([item["domain_id"] for item in train]))
+        self.statistics['ood_val domain number'] = len(set([item["domain_id"] for item in ood_val]))
+        self.statistics['ood_test domain number'] = len(set([item["domain_id"] for item in ood_test]))
+        self.statistics['iid_val domain number'] = len(set([item["domain_id"] for item in iid_val]))
+        self.statistics['iid_test domain number'] = len(set([item["domain_id"] for item in iid_test]))
+
         return split
 
     def data_saving(self, data):
@@ -301,8 +309,8 @@ class GenericCurator(object):
         from prettytable import PrettyTable
         table = PrettyTable(['split', 'domain number', 'sample number '], title="Statistics of curated ood dataset")
         table.add_row(['train', self.statistics['train domain number'], self.statistics['train datapoints']])
-        table.add_row(['iid_val', self.statistics['train domain number'], self.statistics['iid_val datapoints']])
-        table.add_row(['ood_val', self.statistics['val domain number'], self.statistics['ood_val datapoints']])
-        table.add_row(['iid_test', self.statistics['train domain number'], self.statistics['iid_test datapoints']])
-        table.add_row(['ood_test', self.statistics['test domain number'], self.statistics['ood_test datapoints']])
+        table.add_row(['iid_val', self.statistics['iid_val domain number'], self.statistics['iid_val datapoints']])
+        table.add_row(['ood_val', self.statistics['ood_val domain number'], self.statistics['ood_val datapoints']])
+        table.add_row(['iid_test', self.statistics['iid_test domain number'], self.statistics['iid_test datapoints']])
+        table.add_row(['ood_test', self.statistics['ood_test domain number'], self.statistics['ood_test datapoints']])
         print_log(table)
