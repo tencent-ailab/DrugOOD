@@ -32,7 +32,7 @@ class IRM(BaseAlgorithm):
         # set IRM-specific variables
         self.irm_lambda = irm_lambda
         self.irm_penalty_anneal_iters = irm_penalty_anneal_iters
-        self.scale = torch.nn.Parameter(torch.tensor(1.))
+        # self.scale = torch.nn.Parameter(torch.tensor(1.))
         self.update_count = 0
 
     def init_weights(self):
@@ -52,15 +52,16 @@ class IRM(BaseAlgorithm):
         feats = self.encode(input, group, **kwargs)
         cls_score = self.tasker.head.fc(feats)
         _, group_indices, _ = split_into_groups(group)
+        scale = torch.nn.Parameter(torch.tensor(1.)).to(cls_score.device)
         main_losses = []
         irm_penalty = []
         for i_group in group_indices:
-            group_losses_dict = self.tasker.head.loss(self.scale * cls_score[i_group], gt_label[i_group])
+            group_losses_dict = self.tasker.head.loss(scale * cls_score[i_group], gt_label[i_group])
             group_losses = sum(_value for _key, _value in group_losses_dict.items() if 'loss' in _key)
             if group_losses.numel() > 0:
                 main_losses.append(group_losses.mean())
-            irm_penalty.append(self.irm_penalty(group_losses))
-        losses = {"main_loss": torch.vstack(main_losses), "irm_loss": torch.vstack(irm_penalty)}
+            irm_penalty.append(self.irm_penalty(group_losses, scale))
+        losses = {"main_loss": torch.vstack(main_losses), "irm_loss": self.irm_lambda * torch.vstack(irm_penalty)}
         return losses
 
     def simple_test(self, input, group, **kwargs):
@@ -69,8 +70,8 @@ class IRM(BaseAlgorithm):
         preds = self.tasker.head.post_process(logits)
         return preds
 
-    def irm_penalty(self, losses):
-        grad_1 = autograd.grad(losses[0::2].mean(), [self.scale], create_graph=True)[0]
-        grad_2 = autograd.grad(losses[1::2].mean(), [self.scale], create_graph=True)[0]
+    def irm_penalty(self, losses, scale):
+        grad_1 = autograd.grad(losses[0::2].mean(), [scale], create_graph=True)[0]
+        grad_2 = autograd.grad(losses[1::2].mean(), [scale], create_graph=True)[0]
         result = torch.sum(grad_1 * grad_2)
         return result
